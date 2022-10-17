@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:plant_app/constants.dart";
+import "package:my_cycle/constants.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MyBottomNavBar extends StatelessWidget {
@@ -19,7 +19,7 @@ class MyBottomNavBar extends StatelessWidget {
             BoxShadow(
               offset: const Offset(0, -10),
               blurRadius: 35,
-              color: kPrimaryColor.withOpacity(0.30),
+              color: kSecondaryColor.withOpacity(0.20),
             ),
           ],
         ),
@@ -28,15 +28,22 @@ class MyBottomNavBar extends StatelessWidget {
           children: <Widget>[
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/flower.svg"),
+              icon: Container(
+                height: 25,
+                child: SvgPicture.asset("assets/icons/home.svg"),
+              ),
             ),
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/heart-icon.svg"),
+              icon: Container(
+                  height: 25,
+                  child: SvgPicture.asset("assets/icons/calender.svg")),
             ),
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/user-icon.svg"),
+              icon: Container(
+                  height: 25,
+                  child: SvgPicture.asset("assets/icons/report.svg")),
             ),
           ],
         ));

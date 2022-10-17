@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:plant_app/constants.dart';
+import 'package:my_cycle/constants.dart';
 
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
@@ -21,28 +21,43 @@ class HeaderWithSearchBox extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-                padding: EdgeInsets.only(
-                  left: kDefaultPadding,
-                  right: kDefaultPadding,
-                  bottom: 36 + kDefaultPadding,
+              padding: EdgeInsets.only(
+                left: kDefaultPadding,
+                right: kDefaultPadding,
+                bottom: 36 + kDefaultPadding,
+              ),
+              height: size.height * 0.2 - 27,
+              decoration: BoxDecoration(
+                color: kPrimaryColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(36),
+                  bottomRight: Radius.circular(36),
                 ),
-                height: size.height * 0.2 - 27,
-                decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(36),
-                    bottomRight: Radius.circular(36),
-                  ),
-                ),
-                child: Row(children: <Widget>[
-                  Text(
-                    "Hi Souvik!",
-                    style: Theme.of(context).textTheme.headline5?.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Welcome Nitya!",
+                        style: Theme.of(context).textTheme.headline5?.copyWith(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      Padding(padding: EdgeInsets.all(5)),
+                      Text(
+                        "You are on day 21",
+                        style:
+                            Theme.of(context).textTheme.headline6?.copyWith(),
+                      ),
+                    ],
                   ),
                   Spacer(),
                   Image.asset("assets/images/logo.png"),
-                ])),
+                ],
+              ),
+            ),
             Positioned(
               bottom: 0,
               left: 0,
@@ -62,23 +77,20 @@ class HeaderWithSearchBox extends StatelessWidget {
                             color: kPrimaryColor.withOpacity(0.23))
                       ]),
                   child: Row(children: <Widget>[
-                    // It collapses to take 0 width so uing expanded so that it takes all the available space
                     Expanded(
                       child: TextField(
                         onChanged: (value) {},
                         decoration: InputDecoration(
-                          hintText: "Search",
+                          hintText: "Not sure where to find?",
                           hintStyle: TextStyle(
                             color: kPrimaryColor.withOpacity(0.5),
                           ),
                           enabledBorder: InputBorder.none,
                           focusedBorder: InputBorder.none,
-                          // suffix isnt working properly so we are using row
-                          // suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
                         ),
                       ),
                     ),
-                    SvgPicture.asset("assets/icons/search.svg"),
+                    // SvgPicture.asset("assets/icons/search.svg"),
                   ])),
             ),
           ],

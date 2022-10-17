@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:plant_app/screens/home/components/featured_plants.dart';
-import 'package:plant_app/screens/home/components/header_with_searchbox.dart';
-import 'package:plant_app/screens/home/components/recommend_plants.dart';
-import 'package:plant_app/screens/home/components/title_with_more_btn.dart';
+import 'package:my_cycle/screens/home/components/alerts.dart';
+import 'package:my_cycle/screens/home/components/header_with_searchbox.dart';
+import 'package:my_cycle/screens/home/components/title_with_more_btn.dart';
 
-import 'package:plant_app/constants.dart';
+import 'package:my_cycle/constants.dart';
+
+import 'profile_info_btns.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,10 +19,9 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(title: "Recommended", press: () {}),
-          RecommendPlants(),
-          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
+          ProfileInfo(),
+          TitleWithMoreBtn(title: "Alerts", press: () {}),
+          Alerts(size: size),
           SizedBox(height: kDefaultPadding)
         ],
       ),
