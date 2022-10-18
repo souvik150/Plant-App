@@ -13,6 +13,21 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Header(),
           Image.asset("assets/images/chart.png"),
+          SizedBox(height: 20),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: kSecondaryColor,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+              ),
+              padding: EdgeInsets.all(10),
+            ),
+            onPressed: () {},
+            child: const Text(
+              'input measurement',
+              style: TextStyle(fontSize: 15),
+            ),
+          ),
         ],
       ),
     );

@@ -18,9 +18,9 @@ class Header extends StatelessWidget {
               padding: EdgeInsets.only(
                 left: kDefaultPadding,
                 right: kDefaultPadding,
-                bottom: 36 + kDefaultPadding,
+                bottom: 18 + kDefaultPadding,
               ),
-              height: size.height * 0.2 - 27,
+              height: size.height * 0.2,
               decoration: BoxDecoration(
                 color: kPrimaryColor,
                 borderRadius: BorderRadius.only(
@@ -35,13 +35,13 @@ class Header extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Welcome Nitya!",
+                        "Ms. Nitya Rajan",
                         style: Theme.of(context).textTheme.headline5?.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Text(
-                        "Here's your Stats",
+                        "19 y/o\nBangalore ",
                         style:
                             Theme.of(context).textTheme.headline6?.copyWith(),
                       ),

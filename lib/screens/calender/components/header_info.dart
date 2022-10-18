@@ -9,7 +9,7 @@ class Header extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-        margin: EdgeInsets.only(bottom: kDefaultPadding * 2.5),
+        // margin: EdgeInsets.only(bottom: kDefaultPadding * 2.5),
         // It will cover 20% of our total height
         height: size.height * 0.2,
         child: Stack(

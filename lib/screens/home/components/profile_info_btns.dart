@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:my_cycle/constants.dart';
+import 'package:my_cycle/screens/doctor/doctor_screen.dart';
+import 'package:my_cycle/screens/profile/profile_screen.dart';
 
 class ProfileInfo extends StatelessWidget {
   const ProfileInfo({
@@ -24,7 +26,13 @@ class ProfileInfo extends StatelessWidget {
               ),
               padding: EdgeInsets.all(10),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Profile(),
+                  ));
+            },
             child: const Text(
               'My Profile',
               style: TextStyle(fontSize: 20),
@@ -39,7 +47,13 @@ class ProfileInfo extends StatelessWidget {
               ),
               padding: EdgeInsets.all(10),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DoctProfile(),
+                  ));
+            },
             child: const Text(
               'My Doctor',
               style: TextStyle(fontSize: 20),
